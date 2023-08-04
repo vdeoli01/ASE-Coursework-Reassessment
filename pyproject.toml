@@ -17,6 +17,7 @@ toml = "^0.10.2"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.3.3"
+flake8 = "<6.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
