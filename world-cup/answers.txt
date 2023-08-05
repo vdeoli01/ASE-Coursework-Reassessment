@@ -1,24 +1,29 @@
-- Using the command: python tournament.py 2018m.csv
+- Using the command: `python tournament.py 2018m.csv`
 
 Times:
 
-10 simulations: 0m0.018s (record time using 0m0.000s format)
-100 simulations: 0m0.020s (record time using 0m0.000s format)
-1000 simulations: 0m0.025s (record time using 0m0.000s format)
-10000 simulations: 0m0.080s (record time using 0m0.000s format)
-100000 simulations: 0m0.644s (record time using 0m0.000s format)
-1000000 simulations: 0m6.441s (record time using 0m0.000s format)
+10 simulations: 0m0.018s
+100 simulations: 0m0.020s
+1000 simulations: 0m0.025s
+10000 simulations: 0m0.080s
+100000 simulations: 0m0.644s
+1000000 simulations: 0m6.441s
 
 Questions:
 
-Which predictions, if any, proved incorrect as you increased the number of simulations?: TODO
-- 
+Which predictions, if any, proved incorrect as you increased the number of simulations?:
+- Two of my initial predictions were as follows:
+    1) The winning percentages would be inaccurate with smaller simulations.
+    2) There would be an exponential increase in time as working down the values for N (since the values of N were increasing exponentially).
+- Both of these predictions proved to be true. However, the results stabilized later than expected, as I initially assumed that only 1,000 simulations would be sufficient.
+- Between 1,000 and 10,000 simulations, the winning percentages of each team changed, leading to variations in the top three positions. Consequently, more simulations were needed to achieve the desired accuracy.
+
 
 Suppose you're charged a fee for each second of compute time your program uses.
-After how many simulations would you call the predictions "good enough"?: TODO
+After how many simulations would you call the predictions "good enough"?:
 
-- This all depends on what the predictions are used for 
-- If the aim is to just predict the winner then this might be able to be done in fewer simluations than predicting each teams winning chances accuratley
-- In order to deduce the latter case the most efficient solution would be to keep simulating tournaments till the order of teams stayed the same (stabilised) between simulations.
-  At this point you know your predictions are good enough.
-- In our case this was between 1,000 and 10,000 the order of teams stabilised
+- The number of simulations required depends on what the predictions will be used for.
+- If the goal is merely to predict the winner, this might be achievable with fewer simulations than would be needed to accurately predict the winning chances for each team.
+- To accurately deduce the latter case, the most efficient approach would be to continue simulating tournaments until the order of teams stabilizes (remains the same) between simulations. 
+  At this point, you can be confident that your predictions are good enough.
+- In our specific case, the order of teams stabilized between 1,000 and 10,000 simulations.
