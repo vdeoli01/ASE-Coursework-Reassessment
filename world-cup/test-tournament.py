@@ -6,6 +6,7 @@ import io
 
 
 def test_simulate_tournament():
+    """Test simulate_tournament() with 4 teams."""
     teams = [
         {"team": "Team A", "rating": 100},
         {"team": "Team B", "rating": 50},
@@ -19,7 +20,16 @@ def test_simulate_tournament():
         assert winner == "Team C"  # Highest rating
 
 
+def test_simulate_tournament__single_team():
+    """If there is only one team, it should win."""
+    teams = [{"team": "Team A", "rating": 100}]
+
+    winner = simulate_tournament(teams)
+    assert winner == "Team A"  # Highest rating
+
+
 def test_main():
+    """Test main() with 2 teams from test-teams.csv"""
     filename = "test-teams.csv"
     # Simulate command-line argument
     sys.argv = ["tournament.py", filename]
